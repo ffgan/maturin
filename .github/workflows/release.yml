@@ -183,7 +183,7 @@ jobs:
       - run: rustup target add --toolchain stable ${{ matrix.platform.target }}
         if: ${{ !contains(fromJson('["powerpc64le-unknown-linux-musl", "s390x-unknown-linux-gnu", "loongarch64-unknown-linux-gnu", "riscv64gc-unknown-linux-gnu"]'), matrix.platform.target) }}
       - uses: dtolnay/rust-toolchain@stable
-        if: contains(fromJson('["s390x-unknown-linux-gnu", "loongarch64-unknown-linux-gnu"]'), matrix.platform.target)
+        if: contains(fromJson('["s390x-unknown-linux-gnu", "loongarch64-unknown-linux-gnu", "riscv64gc-unknown-linux-gnu"]'), matrix.platform.target)
         with:
           targets: ${{ matrix.platform.target }}
       - name: Build wheel
