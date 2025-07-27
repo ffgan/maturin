@@ -141,7 +141,7 @@ jobs:
 
   build-musl:
     name: Build ${{ matrix.platform.target }}
-    runs-on: u24
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
@@ -221,7 +221,7 @@ jobs:
       # Use to generate artifact attestation.
       attestations: write
     name: Publish to PyPI
-    runs-on: u24
+    runs-on: ubuntu-latest
     environment:
       name: PyPI
       url: ${{ steps.set_url.outputs.env_url }}
@@ -261,7 +261,7 @@ jobs:
       # Use to generate artifact attestation.
       attestations: write
     name: Publish to GitHub releases
-    runs-on: u24
+    runs-on: ubuntu-latest
     needs: [build, build-musl]
     steps:
       - uses: actions/download-artifact@v4
