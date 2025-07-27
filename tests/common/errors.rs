@@ -158,7 +158,7 @@ pub fn pypi_compatibility_unsupported_target() -> Result<()> {
         "--compatibility",
         "pypi",
         "--target",
-        "riscv64gc-unknown-linux-gnu", // Unsupported by PyPI
+        "riscv32gc-unknown-linux-gnu", // Unsupported by PyPI
         "--target-dir",
         "test-crates/targets/pypi_compatibility_unsupported_target",
         "--out",
