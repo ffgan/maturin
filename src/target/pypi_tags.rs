@@ -50,6 +50,7 @@ pub fn is_arch_supported_by_pypi(target: &Target) -> bool {
                 "aarch64" => "arm64_v8a",
                 "i686" => "x86",
                 "x86_64" => "x86_64",
+                "riscv64" => "riscv64", // riscv64 is supported by PyPI
                 _ => return false,
             };
             ANDROID_ARCHES.contains(&android_arch)
