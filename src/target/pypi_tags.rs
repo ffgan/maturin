@@ -223,11 +223,11 @@ mod tests {
             ("aarch64-linux-android", true),
             ("armv7-linux-androideabi", true),
             ("riscv64gc-unknown-linux-gnu", true),
-            ("x86_64-unknown-freebsd", false),      // Now unsupported (no lazy validation)
-            ("powerpc64-unknown-linux-gnu", true),  // PPC64 on Linux is supported
-            ("s390x-unknown-linux-gnu", true),      // s390x on Linux is supported
-            ("wasm32-unknown-emscripten", false),   // Emscripten is unsupported
-            ("i686-pc-windows-msvc", true),         // i686 Windows is supported
+            ("x86_64-unknown-freebsd", false), // Now unsupported (no lazy validation)
+            ("powerpc64-unknown-linux-gnu", true), // PPC64 on Linux is supported
+            ("s390x-unknown-linux-gnu", true), // s390x on Linux is supported
+            ("wasm32-unknown-emscripten", false), // Emscripten is unsupported
+            ("i686-pc-windows-msvc", true),    // i686 Windows is supported
         ];
 
         for (triple, expected) in targets {
